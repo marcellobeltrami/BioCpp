@@ -69,7 +69,7 @@ int main()
     return 0;
 }
 //#####################################################
-//Functions are pro                                  //
+//     Functions are defined properly below          //
 //#####################################################
 
 //DNA Splitter function
