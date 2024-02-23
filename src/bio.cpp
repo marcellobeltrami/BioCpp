@@ -107,7 +107,6 @@ return RNA;
 }
 
 
-
 //Alignment function (to be added)
 
 
