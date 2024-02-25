@@ -98,7 +98,7 @@ string DNA_t_RNA(string DNA){
             RNA+= 'A';
         } else {
             cout << "Foreign character detected, exiting....";
-            cout << "exited :(" << endl;
+            cout << "exited :(" << "\n";
             return "Failure_exit_code: RNA";
         }
     } 

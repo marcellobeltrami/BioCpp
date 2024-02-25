@@ -3,10 +3,39 @@
 #include <string>
 
 //usese namespace
-using namespace std;
 
 
-string check_input(string usr_inp, string CPU_inp){
+//Declare function. Defined after main.
+std::string check_input(std::string usr_inp, std::string CPU_inp);
+
+
+//Main function
+int main() {
+    //Usr choice.
+    std::cout << "USR------> Rock, paper or scissors (R/P/S): ";
+    std::string usr_choice;
+    getline(std::cin, usr_choice);
+    
+
+    //CPU choice.
+    std::cout << "CPU------> Rock, paper or scissors (R/P/S): ";
+    std::string CPU_choice;
+    getline(std::cin, CPU_choice);
+
+
+    //Logic of the game.
+    std::string result = check_input(usr_choice, CPU_choice);
+
+    std::cout << result << "\n";
+
+return 0;
+}
+
+
+
+
+//MAIN LOGIC:  Checks inputs and returns the winner  
+std::string check_input(std::string usr_inp, std::string CPU_inp){
     
     // Tests in case of tie
     if (usr_inp == CPU_inp){
@@ -59,26 +88,4 @@ string check_input(string usr_inp, string CPU_inp){
             return "USR invalid input ";
         
     }
-}
-
-
-int main() {
-    //Usr choice.
-    cout << "USR------> Rock, paper or scissors (R/P/S): ";
-    string usr_choice;
-    getline(cin, usr_choice);
-    
-
-    //CPU choice.
-    cout << "CPU------> Rock, paper or scissors (R/P/S): ";
-    string CPU_choice;
-    getline(cin, CPU_choice);
-
-
-    //Logic of the game.
-    string result = check_input(usr_choice, CPU_choice);
-
-    cout << result << endl;;
-
-return 0;
 }
